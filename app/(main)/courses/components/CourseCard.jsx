@@ -8,7 +8,7 @@ import React from 'react';
 
 const CourseCard = ({course}) => {
     return (
-        <Link href={`/courses/${course.id}`}>
+        <Link className='transition-transform duration-300 transform rounded shadow-lg hover:scale-105' href={`/courses/${course.id}`}>
             <div className="h-full p-3 overflow-hidden transition border rounded-lg group hover:shadow-sm">
                 <div className="relative w-full overflow-hidden rounded-md aspect-video">
                     <Image
