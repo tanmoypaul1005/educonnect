@@ -147,7 +147,7 @@ const HomePage = () => {
 
           <Link
             href={""}
-            className="flex items-center gap-1 text-sm font-medium  hover:opacity-80"
+            className="flex items-center gap-1 text-sm font-medium hover:opacity-80"
           >
             Browse All <ArrowRightIcon className="w-4 h-4" />
           </Link>
@@ -156,7 +156,7 @@ const HomePage = () => {
           {categories.map((category) => {
             return (
               <Link
-                href=""
+              href={`/categories/${category.id}`}
                 key={category.id}
                 className="relative p-2 overflow-hidden transition-all duration-500 ease-in-out border rounded-lg bg-background hover:scale-105"
               >
@@ -181,7 +181,7 @@ const HomePage = () => {
           <SectionTitle>Courses</SectionTitle>
           <Link
             href={""}
-            className="flex items-center gap-1 text-sm font-medium  hover:opacity-80"
+            className="flex items-center gap-1 text-sm font-medium hover:opacity-80"
           >
             Browse All <ArrowRightIcon className="w-4 h-4" />
           </Link>
