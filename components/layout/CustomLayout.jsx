@@ -21,6 +21,10 @@ const CustomLayout = ({children}) => {
             title: "Courses",
             href: "/courses",
         },
+        {
+            title: "Instructors",
+            href: "/instructor",
+        },
      
     ];
 

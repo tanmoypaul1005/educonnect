@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const InstructorCard = ({ instructor }) => (
-    <Link href={`/Instructor/${instructor?.id}`} className="max-w-sm overflow-hidden bg-white rounded shadow-lg">
+    <Link href={`/instructor/${instructor?.id}`} className="max-w-sm overflow-hidden bg-white rounded shadow-lg">
         <img className="object-cover w-full h-48" src={instructor?.image} alt={instructor?.name} />
         <div className="px-6 py-4">
             <div className="mb-2 text-xl font-bold">{instructor?.name}</div>
