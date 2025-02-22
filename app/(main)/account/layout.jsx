@@ -1,10 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
-import Link from "next/link";
 import Menu from "./component/account-menu";
 
 function Layout({ tabs }) {
@@ -15,8 +10,8 @@ function Layout({ tabs }) {
 				<div className="lg:flex">
 					<div className="lg:w-1/4 md:px-3">
 						<div className="relative">
-							<div className="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900">
-								<div className="profile-pic text-center mb-5">
+							<div className="p-6 bg-white rounded-md shadow dark:shadow-gray-800 dark:bg-slate-900">
+								<div className="mb-5 text-center profile-pic">
 									<input
 										id="pro-img"
 										name="profile-image"
@@ -25,7 +20,7 @@ function Layout({ tabs }) {
 										onchange="loadFile(event)"
 									/>
 									<div>
-										<div className="relative size-28 mx-auto">
+										<div className="relative mx-auto size-28">
 											<Image
 												src="/assets/images/profile.jpg"
 												className="rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800"
@@ -57,14 +52,14 @@ function Layout({ tabs }) {
 					</div>
 					<div className="lg:w-3/4 md:px-3 mt-[30px] lg:mt-0">
 						{tabs}
-						{/* <div className="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900">
-							<h5 className="text-lg font-semibold mb-4">
+						{/* <div className="p-6 bg-white rounded-md shadow dark:shadow-gray-800 dark:bg-slate-900">
+							<h5 className="mb-4 text-lg font-semibold">
 								Personal Detail :
 							</h5>
 							<form>
-								<div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
+								<div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
 									<div>
-										<Label className="mb-2 block">
+										<Label className="block mb-2">
 											First Name :{" "}
 											<span className="text-red-600">*</span>
 										</Label>
@@ -77,7 +72,7 @@ function Layout({ tabs }) {
 										/>
 									</div>
 									<div>
-										<Label className="mb-2 block">
+										<Label className="block mb-2">
 											Last Name :{" "}
 											<span className="text-red-600">*</span>
 										</Label>
@@ -89,7 +84,7 @@ function Layout({ tabs }) {
 										/>
 									</div>
 									<div>
-										<Label className="mb-2 block">
+										<Label className="block mb-2">
 											Your Email :{" "}
 											<span className="text-red-600">*</span>
 										</Label>
@@ -101,7 +96,7 @@ function Layout({ tabs }) {
 										/>
 									</div>
 									<div>
-										<Label className="mb-2 block">Occupation :</Label>
+										<Label className="block mb-2">Occupation :</Label>
 										<Input
 											name="name"
 											id="occupation"
@@ -112,7 +107,7 @@ function Layout({ tabs }) {
 								</div>
 								<div className="grid grid-cols-1">
 									<div className="mt-5">
-										<Label className="mb-2 block">
+										<Label className="block mb-2">
 											Description :
 										</Label>
 										<Textarea
@@ -132,15 +127,15 @@ function Layout({ tabs }) {
 							</form>
 						</div>
 						<div className="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900 mt-[30px]">
-							<div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
+							<div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
 								<div>
-									<h5 className="text-lg font-semibold mb-4">
+									<h5 className="mb-4 text-lg font-semibold">
 										Contact Info :
 									</h5>
 									<form>
 										<div className="grid grid-cols-1 gap-5">
 											<div>
-												<Label className="mb-2 block">
+												<Label className="block mb-2">
 													Phone No. :
 												</Label>
 												<Input
@@ -151,7 +146,7 @@ function Layout({ tabs }) {
 												/>
 											</div>
 											<div>
-												<Label className="mb-2 block">
+												<Label className="block mb-2">
 													Website :
 												</Label>
 												<Input
@@ -168,13 +163,13 @@ function Layout({ tabs }) {
 									</form>
 								</div>
 								<div>
-									<h5 className="text-lg font-semibold mb-4">
+									<h5 className="mb-4 text-lg font-semibold">
 										Change password :
 									</h5>
 									<form>
 										<div className="grid grid-cols-1 gap-5">
 											<div>
-												<Label className="mb-2 block">
+												<Label className="block mb-2">
 													Old password :
 												</Label>
 												<Input
@@ -184,7 +179,7 @@ function Layout({ tabs }) {
 												/>
 											</div>
 											<div>
-												<Label className="mb-2 block">
+												<Label className="block mb-2">
 													New password :
 												</Label>
 												<Input
@@ -194,7 +189,7 @@ function Layout({ tabs }) {
 												/>
 											</div>
 											<div>
-												<Label className="mb-2 block">
+												<Label className="block mb-2">
 													Re-type New password :
 												</Label>
 												<Input

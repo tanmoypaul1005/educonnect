@@ -184,7 +184,6 @@ const CoursesPage = () => {
       id="courses"
       className="container py-6 space-y-6 dark:bg-transparent"
     >
-      {/* <h2 className="text-xl font-medium md:text-2xl">All Courses</h2> */}
       {/* header */}
       <div className="flex flex-col items-baseline justify-between gap-4 pb-6 border-b border-gray-200 lg:flex-row">
         <div className="relative h-10 max-lg:w-full">

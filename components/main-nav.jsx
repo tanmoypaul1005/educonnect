@@ -24,7 +24,7 @@ export function MainNav({ items, children }) {
 
 	return (
 		<>
-			<div className="flex gap-6 lg:gap-10">
+			<div className="flex gap-6 lg:gap-4">
 				<Link href="/">
 					<Image width={40} height={40} className="max-w-[100px]" src={lwsLogo} alt="Logo" />
 				</Link>
@@ -35,7 +35,7 @@ export function MainNav({ items, children }) {
 								key={index}
 								href={item.disabled ? "#" : item.href}
 								className={cn(
-									"flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm"
+									"flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-lg"
 								)}>
 								{item.title}
 							</Link>

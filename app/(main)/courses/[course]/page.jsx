@@ -82,8 +82,8 @@ const courses = [
 const SingleCoursePage = () => {
   return (
     <>
-      <div className="overflow-x-hidden  grainy">
-        <section className="pt-12  sm:pt-16">
+      <div className="overflow-x-hidden grainy">
+        <section className="pt-12 sm:pt-16">
           <div className="container">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="max-w-2xl mx-auto text-center">
@@ -97,8 +97,8 @@ const SingleCoursePage = () => {
                   </span>
                 </p>
 
-                <div className="mt-6 flex items-center justify-center flex-wrap gap-3">
-                  <Link href="" className={cn(buttonVariants({ size: "lg" }))}>
+                <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+                  <Link href="/categories/1" className={cn(buttonVariants({ size: "lg" }))}>
                     Enroll Now
                   </Link>
                   <Link
@@ -113,7 +113,7 @@ const SingleCoursePage = () => {
               </div>
             </div>
 
-            <div className="pb-12  mt-6">
+            <div className="pb-12 mt-6">
               <div className="relative">
                 <div className="absolute inset-0 h-2/3"></div>
                 <div className="relative mx-auto">
@@ -138,14 +138,14 @@ const SingleCoursePage = () => {
           <span className="bg-success px-4 py-0.5 rounded-full text-xs font-medium text-white inline-block">
             Development
           </span>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold 2xl:text-5xl mt-3">
+          <h3 className="mt-3 text-2xl font-bold md:text-3xl lg:text-4xl 2xl:text-5xl">
             Reactive Accelerator
           </h3>
-          <p className="mt-3 text-gray-600 text-sm">
+          <p className="mt-3 text-sm text-gray-600">
             Master React JS & Next JS
           </p>
           {/*  */}
-          <div className="flex sm:items-center gap-5 flex-col sm:flex-row sm:gap-6 md:gap-20 mt-6">
+          <div className="flex flex-col gap-5 mt-6 sm:items-center sm:flex-row sm:gap-6 md:gap-20">
             <div className="flex items-center gap-2">
               <img
                 className="w-[40px] h-[40px] rounded-full"
@@ -155,7 +155,7 @@ const SingleCoursePage = () => {
               <p className="font-bold">Tapas Adhikary</p>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <span className="text-success font-semibold">Last Updated: </span>
+              <span className="font-semibold text-success">Last Updated: </span>
               <span>Feb 22, 2022</span>
             </div>
           </div>
@@ -172,7 +172,7 @@ const SingleCoursePage = () => {
               <TabsContent value="overview">
                 {/* each tab content can be independent component */}
                 <>
-                  <h3 className=" text-2xl">Course Description</h3>
+                  <h3 className="text-2xl ">Course Description</h3>
                   <p className="mt-4">
                     This tutorial will help you learn quickly and thoroughly.
                     Lorem ipsum, or lipsum as it sometimes known, is dummy text
@@ -186,11 +186,11 @@ const SingleCoursePage = () => {
                     is dummy text used in laying out print, graphic or web
                     designs Lorem ipsum blinding shot chinwag knees.
                   </p>
-                  <div className="bg-gray-50 space-y-6 p-8 rounded-md mt-8">
+                  <div className="p-8 mt-8 space-y-6 rounded-md bg-gray-50">
                     <h4 className="text-2xl">What You will Learn?</h4>
-                    <ul className="grid sm:grid-cols-2 grid-cols-1 gap-6">
+                    <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                       <li className="flex space-x-3">
-                        <div className="flex-none relative top-1">
+                        <div className="relative flex-none top-1">
                           <CheckCheck />
                         </div>
                         <div className="flex-1">
@@ -199,7 +199,7 @@ const SingleCoursePage = () => {
                         </div>
                       </li>
                       <li className="flex space-x-3">
-                        <div className="flex-none relative top-1">
+                        <div className="relative flex-none top-1">
                           <CheckCheck />
                         </div>
                         <div className="flex-1">
@@ -208,7 +208,7 @@ const SingleCoursePage = () => {
                         </div>
                       </li>
                       <li className="flex space-x-3">
-                        <div className="flex-none relative top-1">
+                        <div className="relative flex-none top-1">
                           <CheckCheck />
                         </div>
                         <div className="flex-1">
@@ -217,7 +217,7 @@ const SingleCoursePage = () => {
                         </div>
                       </li>
                       <li className="flex space-x-3">
-                        <div className="flex-none relative top-1">
+                        <div className="relative flex-none top-1">
                           <CheckCheck />
                         </div>
                         <div className="flex-1">
@@ -553,13 +553,13 @@ const SingleCoursePage = () => {
               </TabsContent>
               <TabsContent value="instructor">
                 {/* each tab content can be independent component */}
-                <div className="bg-gray-50 rounded-md p-8">
-                  <div className="md:flex md:gap-x-5 mb-8">
+                <div className="p-8 rounded-md bg-gray-50">
+                  <div className="mb-8 md:flex md:gap-x-5">
                     <div className="h-[310px] w-[270px] max-w-full  flex-none rounded mb-5 md:mb-0">
                       <img
                         src="https://avatars.githubusercontent.com/u/3633137?v=4"
                         alt=""
-                        className="w-full h-full object-cover rounded"
+                        className="object-cover w-full h-full rounded"
                       />
                     </div>
                     <div className="flex-1">
@@ -567,10 +567,10 @@ const SingleCoursePage = () => {
                         <h4 className="text-[34px] font-bold leading-[51px]">
                           Tapas Adhikary
                         </h4>
-                        <div className="text-gray-600 font-medium mb-6">
+                        <div className="mb-6 font-medium text-gray-600">
                           Senior Software Engineer
                         </div>
-                        <ul className="list space-y-4">
+                        <ul className="space-y-4 list">
                           <li className="flex items-center space-x-3">
                             <Presentation className="text-gray-600" />
                             <div>10+ Courses</div>
@@ -626,14 +626,14 @@ const SingleCoursePage = () => {
                   className="md:basis-1/2 lg:basis-1/3"
                 >
                   <div className="sm:break-inside-avoid">
-                    <blockquote className="rounded-lg bg-gray-50 p-6  sm:p-8 shadow-sm">
+                    <blockquote className="p-6 rounded-lg shadow-sm bg-gray-50 sm:p-8">
                       <div className="flex items-center gap-4">
                         <img
                           alt=""
                           src="https://i.pravatar.cc/56"
                           width="56"
                           height="56"
-                          className="size-14 rounded-full object-cover"
+                          className="object-cover rounded-full size-14"
                         />
                         <div>
                           <p className="mt-0.5 text-lg font-medium text-gray-900">
@@ -642,7 +642,7 @@ const SingleCoursePage = () => {
                           <div className="flex justify-center gap-0.5 text-yellow-600">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
@@ -650,7 +650,7 @@ const SingleCoursePage = () => {
                             </svg>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
@@ -658,7 +658,7 @@ const SingleCoursePage = () => {
                             </svg>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
@@ -666,7 +666,7 @@ const SingleCoursePage = () => {
                             </svg>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
@@ -674,7 +674,7 @@ const SingleCoursePage = () => {
                             </svg>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5"
+                              className="w-5 h-5"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
@@ -717,8 +717,8 @@ const SingleCoursePage = () => {
                   className="md:basis-1/2 lg:basis-1/3"
                 >
                   <Link href={`/courses/${course.id}`}>
-                    <div className="group hover:shadow-sm transition overflow-hidden border rounded-lg p-3 h-full">
-                      <div className="relative w-full aspect-video rounded-md overflow-hidden">
+                    <div className="h-full p-3 overflow-hidden transition border rounded-lg group hover:shadow-sm">
+                      <div className="relative w-full overflow-hidden rounded-md aspect-video">
                         <Image
                           src="/assets/images/courses/course_1.png"
                           alt={"course"}
@@ -727,13 +727,13 @@ const SingleCoursePage = () => {
                         />
                       </div>
                       <div className="flex flex-col pt-2">
-                        <div className="text-lg md:text-base font-medium group-hover:text-sky-700 line-clamp-2">
+                        <div className="text-lg font-medium md:text-base group-hover:text-sky-700 line-clamp-2">
                           Reactive Accelerator
                         </div>
                         <p className="text-xs text-muted-foreground">
                           Development
                         </p>
-                        <div className="my-3 flex items-center gap-x-2 text-sm md:text-xs">
+                        <div className="flex items-center my-3 text-sm gap-x-2 md:text-xs">
                           <div className="flex items-center gap-x-1 text-slate-500">
                             <div>
                               <BookOpen className="w-4" />
@@ -749,13 +749,13 @@ const SingleCoursePage = () => {
                         />
 
                         <div className="flex items-center justify-between mt-4">
-                          <p className="text-md md:text-sm font-medium text-slate-700">
+                          <p className="font-medium text-md md:text-sm text-slate-700">
                             {formatPrice(49)}
                           </p>
 
                           <Button
                             variant="ghost"
-                            className="text-xs text-sky-700 h-7 gap-1"
+                            className="gap-1 text-xs text-sky-700 h-7"
                           >
                             Enroll
                             <ArrowRight className="w-3" />

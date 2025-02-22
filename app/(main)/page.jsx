@@ -3,9 +3,9 @@ import { SectionTitle } from "@/components/section-title";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "./courses/components/CourseCard";
+import CategoryCard from "./(components)/CategoryCard";
 
 const categories = [
   {
@@ -151,23 +151,9 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="grid justify-center grid-cols-2 gap-4 mx-auto md:grid-cols-3 2xl:grid-cols-4">
-          {categories.map((category) => {
+          {categories?.map((category) => {
             return (
-              <Link
-              href={`/categories/${category.id}`}
-                key={category.id}
-                className="relative p-2 overflow-hidden transition-all duration-500 ease-in-out border rounded-lg bg-background hover:scale-105"
-              >
-                <div className="flex flex-col items-center justify-between gap-4 p-6 rounded-md">
-                  <Image
-                    src={category.thumbnail}
-                    alt={category.title}
-                    width={100}
-                    height={100}
-                  />
-                  <h3 className="font-bold">{category.title}</h3>
-                </div>
-              </Link>
+              <CategoryCard key={category.id} category={category} />
             );
           })}
         </div>
