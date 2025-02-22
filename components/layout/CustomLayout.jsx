@@ -17,6 +17,10 @@ const CustomLayout = ({children}) => {
             title: "Blog",
             href: "/blog",
         },
+        {
+            title: "Courses",
+            href: "/courses",
+        },
      
     ];
 

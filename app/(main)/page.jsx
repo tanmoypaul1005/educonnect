@@ -126,7 +126,7 @@ const HomePage = () => {
             way.”
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link href="" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link href="/courses" className={cn(buttonVariants({ size: "lg" }))}>
               Explore Now
             </Link>
             <Link
