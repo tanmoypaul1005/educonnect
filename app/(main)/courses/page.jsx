@@ -131,7 +131,7 @@ const courses = [
   {
     id: 5,
     title: "IT & Software",
-    thumbnail: "/assets/images/categories/it_software.jpg",
+    thumbnail: "/assets/images//it_software.jpg",
   },
   {
     id: 6,
@@ -181,17 +181,17 @@ const CoursesPage = () => {
   return (
     <section
       id="courses"
-      className="container space-y-6   dark:bg-transparent py-6"
+      className="container py-6 space-y-6 dark:bg-transparent"
     >
-      {/* <h2 className="text-xl md:text-2xl font-medium">All Courses</h2> */}
+      {/* <h2 className="text-xl font-medium md:text-2xl">All Courses</h2> */}
       {/* header */}
-      <div className="flex items-baseline justify-between  border-gray-200 border-b pb-6 flex-col gap-4 lg:flex-row">
+      <div className="flex flex-col items-baseline justify-between gap-4 pb-6 border-b border-gray-200 lg:flex-row">
         <div className="relative h-10 max-lg:w-full">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 h-4 w-4" />
+          <Search className="absolute z-10 w-4 h-4 text-gray-500 transform -translate-y-1/2 left-3 top-1/2" />
           <Input
             type="text"
             placeholder="Search courses..."
-            className="pl-8 pr-3 py-2 text-sm" // Add additional styling as needed
+            className="py-2 pl-8 pr-3 text-sm" // Add additional styling as needed
           />
         </div>
 
@@ -221,7 +221,7 @@ const CoursesPage = () => {
           <div className="lg:hidden">
             <Sheet>
               <SheetTrigger>
-                <Filter className="h-6 w-6" />
+                <Filter className="w-6 h-6" />
               </SheetTrigger>
               <SheetContent side="left">
                 <SheetHeader>
@@ -310,14 +310,14 @@ const CoursesPage = () => {
       </div>
       {/* header ends */}
       {/* active filters */}
-      <div className="flex items-center gap-2 flex-wrap">
+      <div className="flex flex-wrap items-center gap-2">
         {/* active categories */}
         {filter.categories.length > 0 &&
           filter.categories.map((category) => (
             <Button
               key={category}
               variant="ghost"
-              className="text-xs h-7 bg-muted rounded-full gap-1 text-sky-700"
+              className="gap-1 text-xs rounded-full h-7 bg-muted text-sky-700"
               onClick={() =>
                 applyArrayFilter({ type: "categories", value: category })
               }
@@ -332,7 +332,7 @@ const CoursesPage = () => {
             <Button
               key={price}
               variant="ghost"
-              className="text-xs h-7 bg-muted rounded-full gap-1 text-sky-700"
+              className="gap-1 text-xs rounded-full h-7 bg-muted text-sky-700"
               onClick={() => applyArrayFilter({ type: "price", value: price })}
             >
               {price}
@@ -340,7 +340,7 @@ const CoursesPage = () => {
             </Button>
           ))}
       </div>
-      <section className="pb-24 pt-6">
+      <section className="pt-6 pb-24">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
           {/* Filters */}
           {/* these component can be re use for mobile also */}
@@ -413,12 +413,12 @@ const CoursesPage = () => {
             </Accordion>
           </div>
           {/* Course grid */}
-          <div className="lg:col-span-3 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+          <div className="grid gap-4 lg:col-span-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {courses.map((category) => {
               return (
                 <Link key={category.id} href={`/courses/${category.id}`}>
-                  <div className="group hover:shadow-sm transition overflow-hidden border rounded-lg p-3 h-full">
-                    <div className="relative w-full aspect-video rounded-md overflow-hidden">
+                  <div className="h-full p-3 overflow-hidden transition border rounded-lg group hover:shadow-sm">
+                    <div className="relative w-full overflow-hidden rounded-md aspect-video">
                       <Image
                         src="/assets/images/courses/course_1.png"
                         alt={"course"}
@@ -427,13 +427,13 @@ const CoursesPage = () => {
                       />
                     </div>
                     <div className="flex flex-col pt-2">
-                      <div className="text-lg md:text-base font-medium group-hover:text-sky-700 line-clamp-2">
+                      <div className="text-lg font-medium md:text-base group-hover:text-sky-700 line-clamp-2">
                         Reactive Accelerator
                       </div>
                       <p className="text-xs text-muted-foreground">
                         Development
                       </p>
-                      <div className="my-3 flex items-center gap-x-2 text-sm md:text-xs">
+                      <div className="flex items-center my-3 text-sm gap-x-2 md:text-xs">
                         <div className="flex items-center gap-x-1 text-slate-500">
                           <div>
                             <BookOpen className="w-4" />
@@ -449,13 +449,13 @@ const CoursesPage = () => {
                       />
 
                       <div className="flex items-center justify-between mt-4">
-                        <p className="text-md md:text-sm font-medium text-slate-700">
+                        <p className="font-medium text-md md:text-sm text-slate-700">
                           {formatPrice(49)}
                         </p>
 
                         <Button
                           variant="ghost"
-                          className="text-xs text-sky-700 h-7 gap-1"
+                          className="gap-1 text-xs text-sky-700 h-7"
                         >
                           Enroll
                           <ArrowRight className="w-3" />
