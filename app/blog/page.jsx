@@ -3,7 +3,7 @@ import React from 'react'
 function Blog() {
     return (
         <div>
-            <section className="py-24 ">
+            <section className="py-10">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <h2 className="mb-16 text-4xl font-bold text-center text-gray-900 font-manrope">Our latest  blog</h2>
                     <div className="flex flex-wrap justify-center gap-y-8 lg:gap-y-0 md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
@@ -40,6 +40,7 @@ function Blog() {
                                 <a href="javascript:;" className="text-lg font-semibold text-indigo-600 cursor-pointer">Read more..</a>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
