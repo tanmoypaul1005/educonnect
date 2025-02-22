@@ -1,11 +1,8 @@
-import { CourseProgress } from "@/components/course-progress";
+
 import { SectionTitle } from "@/components/section-title";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { formatPrice } from "@/lib/formatPrice";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { BookOpen } from "lucide-react";
 import { ArrowRightIcon } from "lucide-react";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "./courses/components/CourseCard";
@@ -141,7 +138,7 @@ const HomePage = () => {
       {/* Categories Section */}
       <section
         id="categories"
-        className="container py-8 space-y-6 md:py-12 lg:py-24"
+        className="container py-8 space-y-6 md:py-12 lg:py-10"
       >
         <div className="flex items-center justify-between">
           <SectionTitle>Categories</SectionTitle>
@@ -177,7 +174,7 @@ const HomePage = () => {
       </section>
 
       {/* Courses */}
-      <section id="courses" className="container space-y-6 md:py-12 lg:py-24">
+      <section id="courses" className="container space-y-6 md:py-12 lg:py-10">
         <div className="flex items-center justify-between">
           <SectionTitle>Courses</SectionTitle>
           <Link
