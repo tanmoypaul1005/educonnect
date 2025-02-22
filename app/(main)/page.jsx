@@ -6,6 +6,7 @@ import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import CourseCard from "./courses/components/CourseCard";
 import CategoryCard from "./(components)/CategoryCard";
+import InstructorList from "../Instructor/page";
 
 const categories = [
   {
@@ -178,6 +179,8 @@ const HomePage = () => {
           })}
         </div>
       </section>
+
+      <InstructorList/>
     </>
   );
 };
