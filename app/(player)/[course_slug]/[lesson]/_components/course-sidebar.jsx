@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 import { CheckCircle } from "lucide-react";
 import { PlayCircle } from "lucide-react";
 import { Lock } from "lucide-react";
-import Link from "next/link";
 import { ReviewModal } from "./review-modal";
 
 export const CourseSidebar = () => {
@@ -21,8 +20,8 @@ export const CourseSidebar = () => {
   const isCompleted = true;
   return (
     <>
-      <div className="h-full border-r flex flex-col overflow-y-auto shadow-sm">
-        <div className="p-8 flex flex-col border-b">
+      <div className="flex flex-col h-full overflow-y-auto border-r shadow-sm">
+        <div className="flex flex-col p-8 border-b">
           <h1 className="font-semibold">Reactive Accelerator</h1>
           {/* Check purchase */}
           {
