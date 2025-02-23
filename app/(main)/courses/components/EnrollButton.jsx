@@ -23,7 +23,7 @@ function EnrollButton() {
                 variant="ghost"
                 className="gap-1 text-xs text-sky-700 h-7"
             >
-                Enroll
+                Course Access
                 <ArrowRight className="w-3" />
             </Button>
         </div>

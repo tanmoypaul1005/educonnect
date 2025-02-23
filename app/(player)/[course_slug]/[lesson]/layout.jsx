@@ -8,15 +8,15 @@ import { CourseSidebar } from "./_components/course-sidebar";
 
 const CourseLayout = ({ children }) => {
   return (
-    <div className="">
+    <div>
       <div className="h-[80px] lg:pl-96 fixed inset-y-0 w-full z-50">
-        <div className="p-4 border-b h-full flex items-center bg-white shadow-sm">
+        <div className="flex items-center h-full p-4 bg-white border-b shadow-sm">
           {/* Course Sidebar For Mobile */}
           <CourseSidebarMobile />
           {/* <NavbarRoutes /> */}
         </div>
       </div>
-      <div className="hidden lg:flex h-full w-96 flex-col fixed inset-y-0 z-50">
+      <div className="fixed inset-y-0 z-50 flex-col hidden h-full lg:flex w-96">
         {/* sidebar starts */}
         <CourseSidebar />
         {/* sidebar ends */}

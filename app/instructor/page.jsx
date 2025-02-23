@@ -4,9 +4,9 @@ import Link from 'next/link';
 import React from 'react';
 
 const InstructorCard = ({ instructor }) => (
-    <Link href={`/instructor/${instructor?.id}`} className="max-w-sm overflow-hidden transition-transform duration-300 transform bg-white rounded shadow-lg hover:scale-105">
+    <Link href={`/instructor/${instructor?.id}`} className="max-w-sm overflow-hidden transition-transform duration-300 transform bg-white border rounded shadow-lg hover:scale-105">
         <Image width={100} height={100} className="object-contain w-full h-48" src={instructor?.image} alt={instructor?.name} />
-        <div className="px-6 py-4">
+        <div className="px-6 py-3">
             <div className="mb-2 text-xl font-bold">{instructor?.name}</div>
             <p className="text-base text-gray-700">{instructor?.title}</p>
             <p className="mt-2 text-base text-gray-700">{instructor?.bio}</p>
