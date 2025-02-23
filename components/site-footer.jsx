@@ -13,9 +13,6 @@ export function SiteFooter({ classNameName }) {
               <Logo />
               </Link>
               <p className="py-8 text-sm text-center text-gray-500 lg:max-w-xs lg:text-left">Trusted in more than 100 countries & 5 million customers. Have any query ?</p>
-              {/* <a className="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0">
-                Contact us
-              </a> */}
             </div>
 
             <div className="text-left lg:mx-auto ">
@@ -45,14 +42,16 @@ export function SiteFooter({ classNameName }) {
               </ul>
             </div>
 
+
             <div className="text-left lg:mx-auto ">
-              <h4 className="text-lg font-medium text-gray-900 mb-7">Subscribe</h4>
-              <p className="text-sm leading-6 text-gray-500 mb-7">Subscribe to get the latest news from us</p>
-              <Link href={"/"} className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-indigo-600 transition-all duration-500 border border-indigo-600 rounded-full w-fit lg:mx-0 hover:bg-indigo-50">Subscribe<svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              </Link>
+              <h4 className="text-lg font-medium text-gray-900 mb-7">Support</h4>
+              <ul className="text-sm transition-all duration-500">
+                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Customer Support</a></li>
+                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Terms & Conditions</a></li>
+                <li ><Link href="/" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></li>
+              </ul>
             </div>
+     
           </div>
 
           <div className="border-t border-gray-200 py-7">
