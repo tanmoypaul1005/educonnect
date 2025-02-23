@@ -59,7 +59,7 @@ const InstructorList = () => {
     ];
 
     return (
-        <div className="container px-4 py-8 mx-auto">
+        <div className="container px-4 mx-auto">
             <h2 className="mb-8 text-4xl font-bold text-center text-gray-900">Meet Our Instructors</h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {instructors.map((instructor, index) => (
