@@ -39,7 +39,6 @@ const TestimonialSlider = () => {
                         />
                     </li>
                     <li className="text-sm leading-6">
-
                         <TestimonialCard
                             name="Kanye West"
                             title="Rapper &amp; Entrepreneur"
