@@ -27,13 +27,13 @@ function QuizModal({ quizes }) {
   return (
     <>
       <div class="max-w-[270px] bg-white border border-border rounded-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
-        <div className="flex h-32 items-center justify-center bg-gradient-to-r from-sky-500 to-indigo-500 px-6 text-center">
+        <div className="flex items-center justify-center h-32 px-6 text-center bg-gradient-to-r from-sky-500 to-indigo-500">
           <span className="text-lg font-semibold text-white">
             Reactive Accelerator: Quiz Set 4.16 : Module 4 Lesson 16 Quiz Set
           </span>
         </div>
         <div class="p-4">
-          <div className="flex items-center justify-between gap-6 text-sm mb-2 font-medium text-gray-700">
+          <div className="flex items-center justify-between gap-6 mb-2 text-sm font-medium text-gray-700">
             <span>Total Mark</span>
             <Badge className="bg-success/20 text-primary hover:bg-success/20">
               10
@@ -43,7 +43,7 @@ function QuizModal({ quizes }) {
             Reactive Accelerator: Quiz Set of Module 4 Lesson 16: Lesson 16
           </p>
           <Button
-            className="flex gap-2 capitalize border-sky-500 text-sky-500 hover:text-sky-500 hover:bg-sky-500/5 w-full"
+            className="flex w-full gap-2 capitalize border-sky-500 text-sky-500 hover:text-sky-500 hover:bg-sky-500/5"
             variant="outline"
             onClick={() => setOpen(true)}
           >
@@ -66,16 +66,16 @@ function QuizModal({ quizes }) {
       </div>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="sm:max-w-[95%] block">
-          <div className="pb-4 border-b border-border text-sm">
-            <span className="text-success inline-block mr-1">
+          <div className="pb-4 text-sm border-b border-border">
+            <span className="inline-block mr-1 text-success">
               {quizIndex + 1} / 2
-            </span>{" "}
-            টি প্রশ্ন
+            </span>
+            questions
           </div>
           <div className="py-4">
-            <h3 className="text-xl font-medium mb-10">
+            <h3 className="mb-10 text-xl font-medium">
               <svg
-                className="text-success inline"
+                className="inline text-success"
                 stroke-width="0"
                 viewBox="0 0 512 512"
                 height="1em"
@@ -87,9 +87,8 @@ function QuizModal({ quizes }) {
                   stroke="currentColor"
                   d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z"
                 ></path>
-              </svg>{" "}
-              Reactive Accelerator: Quiz 4.16 - রিয়্যাক্ট কম্পোনেন্টের
-              লাইফসাইকেল কোনটি বা কোনগুলো ?
+              </svg>
+              Reactive Accelerator: Quiz 4.16 - What is the lifecycle of a React component?
             </h3>
             <span className="text-[10px] block text-end">
               <svg
@@ -107,11 +106,10 @@ function QuizModal({ quizes }) {
                 <path d="M10 12h-4v-1h1v-3h-1v-1h3v4h1z"></path>
                 <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
               </svg>{" "}
-              একটি প্রশ্নের একাধিক উত্তর হতে পারে & ভুল সিলেকশনে কোন নেগেটিভ
-              মার্কিং নেই
+              A question can have multiple answers & there is no negative marking for incorrect selection.
             </span>
           </div>
-          <div className="grid md:grid-cols-2 gap-5 mb-6">
+          <div className="grid gap-5 mb-6 md:grid-cols-2">
             {currentQuiz?.options.map((option) => (
               <div key={option.id}>
                 <input
@@ -120,7 +118,7 @@ function QuizModal({ quizes }) {
                   id={`option-${option.id}`}
                 />
                 <Label
-                  className="border border-border rounded px-2 py-3 block cursor-pointer hover:bg-gray-50 transition-all font-normal"
+                  className="block px-2 py-3 font-normal transition-all border rounded cursor-pointer border-border hover:bg-gray-50"
                   htmlFor={`option-${option.id}`}
                 >
                   {option.label}
@@ -128,7 +126,7 @@ function QuizModal({ quizes }) {
               </div>
             ))}
           </div>
-          <DialogFooter className="flex gap-4 justify-between w-full sm:justify-between">
+          <DialogFooter className="flex justify-between w-full gap-4 sm:justify-between">
             <Button
               className="gap-2 rounded-3xl"
               disabled={quizIndex === 0}
