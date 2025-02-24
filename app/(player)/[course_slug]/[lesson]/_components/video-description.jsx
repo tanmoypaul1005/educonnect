@@ -30,7 +30,7 @@ function VideoDescription() {
 	return (
 		<div className="mt-4">
 			<Tabs defaultValue="details">
-				<TabsList className="bg-transparent p-0 border-b border-border w-full justify-start h-auto rounded-none">
+				<TabsList className="justify-start w-full h-auto p-0 bg-transparent border-b rounded-none border-border">
 					<TabsTrigger className="capitalize" value="details">
 						Description
 					</TabsTrigger>
@@ -38,7 +38,7 @@ function VideoDescription() {
 						Quiz
 					</TabsTrigger>
 				</TabsList>
-				<div className="pt-3">
+				<div className="px-3 pt-3">
 					<TabsContent value="details">
 						<div>render markdown / quill editor preview</div>
 						<div>render attachment</div>
