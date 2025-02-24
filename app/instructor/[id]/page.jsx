@@ -1,3 +1,4 @@
+import CourseCard from "@/app/(main)/courses/components/CourseCard";
 import { CourseProgress } from "@/components/course-progress";
 import { SectionTitle } from "@/components/section-title";
 import { Button } from "@/components/ui/button";
@@ -54,7 +55,7 @@ const InstructorProfile = () => {
                 <div className="mb-6 text-sm font-medium text-center text-gray-600">
                   Senior Software Engineer
                 </div>
-                <ul className="grid flex-wrap items-center grid-cols-1 gap-3 text-sm font-medium text-gray-600  sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 md:grid-cols-4">
+                <ul className="grid flex-wrap items-center grid-cols-1 gap-3 text-sm font-medium text-gray-600 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 md:grid-cols-4">
                   <li className="flex items-center space-x-3">
                     <Presentation className="w-4 text-gray-600" />
                     <div>10+ Courses</div>
@@ -92,54 +93,7 @@ const InstructorProfile = () => {
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
               {courses.map((category) => {
                 return (
-                  <Link key={category.id} href={`/courses/${category.id}`}>
-                    <div className="h-full p-3 overflow-hidden transition border rounded-lg group hover:shadow-sm">
-                      <div className="relative w-full overflow-hidden rounded-md aspect-video">
-                        <Image
-                          src="/assets/images/courses/course_1.png"
-                          alt={"course"}
-                          className="object-cover"
-                          fill
-                        />
-                      </div>
-                      <div className="flex flex-col pt-2">
-                        <div className="text-lg font-medium md:text-base group-hover:text-sky-700 line-clamp-2">
-                          Reactive Accelerator
-                        </div>
-                        <p className="text-xs text-muted-foreground">
-                          Development
-                        </p>
-                        <div className="flex items-center my-3 text-sm gap-x-2 md:text-xs">
-                          <div className="flex items-center gap-x-1 text-slate-500">
-                            <div>
-                              <BookOpen className="w-4" />
-                            </div>
-                            <span>4 Chapters</span>
-                          </div>
-                        </div>
-
-                        <CourseProgress
-                          size="sm"
-                          value={80}
-                          variant={110 === 100 ? "success" : ""}
-                        />
-
-                        <div className="flex items-center justify-between mt-4">
-                          <p className="font-medium text-md md:text-sm text-slate-700">
-                            {formatPrice(49)}
-                          </p>
-
-                          <Button
-                            variant="ghost"
-                            className="gap-1 text-xs text-sky-700 h-7"
-                          >
-                            Enroll
-                            <ArrowRight className="w-3" />
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
+                  <CourseCard key={category.id} course={category} />
                 );
               })}
             </div>

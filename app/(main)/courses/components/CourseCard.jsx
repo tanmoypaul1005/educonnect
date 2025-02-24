@@ -1,14 +1,20 @@
+"use client"
 import { CourseProgress } from '@/components/course-progress';
-import { Button } from '@/components/ui/button';
 import { formatPrice } from '@/lib/formatPrice';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import EnrollButton from './EnrollButton';
+import { useRouter } from 'next/navigation';
 
-const CourseCard = ({course}) => {
+const CourseCard = ({ course }) => {
+    const router = useRouter();
     return (
-        <Link className='transition-transform duration-300 transform rounded shadow-lg hover:scale-105' href={`/courses/${course.id}`}>
+        <div
+            onClick={() => {
+                router.push(`/courses/${course.id}2`)
+            }}
+            className='transition-transform duration-300 transform rounded shadow-lg hover:scale-105' >
             <div className="h-full p-3 overflow-hidden transition border rounded-lg group hover:shadow-sm">
                 <div className="relative w-full overflow-hidden rounded-md aspect-video">
                     <Image
@@ -45,17 +51,11 @@ const CourseCard = ({course}) => {
                             {formatPrice(49)}
                         </p>
 
-                        <Button
-                            variant="ghost"
-                            className="gap-1 text-xs text-sky-700 h-7"
-                        >
-                            Enroll
-                            <ArrowRight className="w-3" />
-                        </Button>
+                        <EnrollButton />
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     );
 };
 

@@ -21,20 +21,17 @@ export const CourseSidebar = () => {
   return (
     <>
       <div className="flex flex-col h-full overflow-y-auto border-r shadow-sm">
-        <div className="flex flex-col p-8 border-b">
+        <div className="flex flex-col p-2">
           <h1 className="font-semibold">Reactive Accelerator</h1>
-          {/* Check purchase */}
-          {
-            <div className="mt-10">
+            <div className="mt-5">
               <CourseProgress variant="success" value={80} />
             </div>
-          }
         </div>
         <Accordion
           defaultValue="item-1"
           type="single"
           collapsible
-          className="w-full px-6"
+          className="w-full px-3"
         >
           {/* item */}
           <AccordionItem className="border-0" value="item-1">

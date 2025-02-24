@@ -5,14 +5,14 @@ import { SiteFooter } from '../site-footer';
 const CustomLayout = ({children}) => {
 
     const navLinks = [
-        // {
-        //     title: "Features",
-        //     href: "/#features",
-        // },
         {
-            title: "Pricing",
-            href: "/pricing",
+            title: "Dashboard",
+            href: "/dashboard",
         },
+        // {
+        //     title: "Pricing",
+        //     href: "/pricing",
+        // },
         {
             title: "Blog",
             href: "/blog",

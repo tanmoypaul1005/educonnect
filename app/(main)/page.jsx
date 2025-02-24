@@ -7,6 +7,7 @@ import Link from "next/link";
 import CourseCard from "./courses/components/CourseCard";
 import CategoryCard from "./(components)/CategoryCard";
 import InstructorList from "../instructor/page";
+import TestimonialSlider from "./(components)/TestimonialSlider";
 
 const categories = [
   {
@@ -181,6 +182,8 @@ const HomePage = () => {
       </section>
 
       <InstructorList/>
+
+      <TestimonialSlider/>
     </>
   );
 };

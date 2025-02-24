@@ -24,7 +24,7 @@ export function MainNav({ items, children }) {
 
 	return (
 		<>
-			<div className="flex gap-6 lg:gap-4">
+			<div className="flex gap-6 px-5 lg:gap-4">
 				<Link href="/">
 					<Image width={40} height={40} className="max-w-[100px]" src={lwsLogo} alt="Logo" />
 				</Link>
