@@ -86,11 +86,11 @@ const SingleCoursePage = () => {
   return (
     <>
       <div className="flex">
-        <div className="h-[80px] lg:pl-96 fixed inset-y-0 w-full z-50">
+        <div className="h-[80px] lg:pl-96 fixed top-8 left-2 inset-y-0 w-full z-50">
           <div className="">
           {/* flex items-center h-full p-4 bg-white border-b shadow-sm */}
             {/* Course Sidebar For Mobile */}
-            <CourseSidebarMobile />
+          <CourseSidebarMobile /> 
             {/* <NavbarRoutes /> */}
           </div>
         </div>
