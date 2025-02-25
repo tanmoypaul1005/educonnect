@@ -14,7 +14,7 @@ const CourseCard = ({ course }) => {
             onClick={() => {
                 router.push(`/courses/${course.id}2`)
             }}
-            className='transition-transform duration-300 transform rounded shadow-lg hover:scale-105' >
+            className='transition-transform duration-300 transform rounded shadow-lg cursor-pointer hover:scale-105' >
             <div className="h-full p-3 overflow-hidden transition border rounded-lg group hover:shadow-sm">
                 <div className="relative w-full overflow-hidden rounded-md aspect-video">
                     <Image

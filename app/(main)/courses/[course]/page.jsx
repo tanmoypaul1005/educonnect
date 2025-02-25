@@ -39,6 +39,8 @@ import { formatPrice } from "@/lib/formatPrice";
 import Course from "@/app/(player)/[course_slug]/[lesson]/page";
 import { CourseSidebarMobile } from "@/app/(player)/[course_slug]/[lesson]/_components/course-sidebar-mobile";
 import { CourseSidebar } from "@/app/(player)/[course_slug]/[lesson]/_components/course-sidebar";
+
+
 const courses = [
   {
     id: 1,
@@ -82,26 +84,27 @@ const courses = [
     thumbnail: "/assets/images/categories/music.jpg",
   },
 ];
+
 const SingleCoursePage = () => {
   return (
     <>
-      <div className="flex">
-        <div className="h-[80px] lg:pl-96 fixed top-8 left-2 inset-y-0 w-full z-50">
-          <div className="">
-          {/* flex items-center h-full p-4 bg-white border-b shadow-sm */}
-            {/* Course Sidebar For Mobile */}
-          <CourseSidebarMobile /> 
-            {/* <NavbarRoutes /> */}
-          </div>
-        </div>
-        <div className="inset-y-0 flex-col hidden h-full lg:flex w-96">
-        <CourseSidebar />
-        </div>
-        <main className="w-full h-full"> <Course /></main>
-      </div>
 
-      <div className="overflow-x-hidden grainy">
-        {/* <section className="pt-12 sm:pt-16">
+        <div className="container flex w-full">
+          <div className="h-[80px] lg:pl-96 fixed top-8 left-2 inset-y-0 w-full z-50">
+            <div>
+              {/* Course Sidebar For Mobile */}
+              <CourseSidebarMobile />
+              {/* <NavbarRoutes /> */}
+            </div>
+          </div>
+          <div className="inset-y-0 flex-col hidden h-full lg:flex w-96">
+            <CourseSidebar />
+          </div>
+          <main className="w-full h-full"> <Course /></main>
+        </div>
+
+        <div className="overflow-x-hidden grainy">
+          {/* <section className="pt-12 sm:pt-16">
           <div className="container">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="max-w-2xl mx-auto text-center">
@@ -149,7 +152,8 @@ const SingleCoursePage = () => {
             </div>
           </div>
         </section> */}
-      </div>
+        </div>
+
 
       <section className="py-5">
         <div className="container">

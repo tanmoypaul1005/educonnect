@@ -15,9 +15,11 @@ import { Lock } from "lucide-react";
 import { ReviewModal } from "./review-modal";
 
 export const CourseSidebar = () => {
+  
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const isActive = true;
   const isCompleted = true;
+
   return (
     <>
       <div className="flex flex-col h-full overflow-y-auto border-r shadow-sm">
