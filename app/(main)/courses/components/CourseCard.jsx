@@ -18,7 +18,7 @@ const CourseCard = ({ course }) => {
             <div className="h-full p-3 overflow-hidden transition border rounded-lg group hover:shadow-sm">
                 <div className="relative w-full overflow-hidden rounded-md aspect-video">
                     <Image
-                        src="/assets/images/courses/course_1.png"
+                        src={course?.thumbnail ?course?.thumbnail : "/assets/images/courses/JavaScript-BCG-Banner-icons.png"}
                         alt={"course"}
                         className="object-cover"
                         fill
