@@ -8,99 +8,12 @@ import CourseCard from "./courses/components/CourseCard";
 import CategoryCard from "./(components)/CategoryCard";
 import InstructorList from "../instructor/page";
 import TestimonialSlider from "./(components)/TestimonialSlider";
-
-const categories = [
-  {
-    id: 1,
-    title: "Design",
-    thumbnail: "/assets/images/categories/design.jpg",
-  },
-
-  {
-    id: 3,
-    title: "Development",
-    thumbnail: "/assets/images/categories/development.jpg",
-  },
-  {
-    id: 4,
-    title: "Marketing",
-    thumbnail: "/assets/images/categories/marketing.jpg",
-  },
-  {
-    id: 5,
-    title: "IT & Software",
-    thumbnail: "/assets/images/categories/it_software.jpg",
-  },
-  {
-    id: 6,
-    title: "Personal Development",
-    thumbnail: "/assets/images/categories/personal_development.jpg",
-  },
-  {
-    id: 7,
-    title: "Business",
-    thumbnail: "/assets/images/categories/business.jpg",
-  },
-  {
-    id: 8,
-    title: "Photography",
-    thumbnail: "/assets/images/categories/photography.jpg",
-  },
-  {
-    id: 9,
-    title: "Music",
-    thumbnail: "/assets/images/categories/music.jpg",
-  },
-];
-
-const courses = [
-  {
-    id: 1,
-    title: "Design",
-    thumbnail: "/assets/images/categories/design.jpg",
-  },
-
-  {
-    id: 3,
-    title: "Development",
-    thumbnail: "/assets/images/categories/development.jpg",
-  },
-  {
-    id: 4,
-    title: "Marketing",
-    thumbnail: "/assets/images/categories/marketing.jpg",
-  },
-  {
-    id: 5,
-    title: "IT & Software",
-    thumbnail: "/assets/images/categories/it_software.jpg",
-  },
-  {
-    id: 6,
-    title: "Personal Development",
-    thumbnail: "/assets/images/categories/personal_development.jpg",
-  },
-  {
-    id: 7,
-    title: "Business",
-    thumbnail: "/assets/images/categories/business.jpg",
-  },
-  {
-    id: 8,
-    title: "Photography",
-    thumbnail: "/assets/images/categories/photography.jpg",
-  },
-  {
-    id: 9,
-    title: "Music",
-    thumbnail: "/assets/images/categories/music.jpg",
-  },
-];
+import { categories, courses } from "@/lib/data";
 
 const HomePage = () => {
   return (
-    <>
-      <section className="pt-6 pb-8 space-y-6 md:pb-12 md:pt-10 lg:py-32 grainy">
+    <div className="flex flex-col gap-y-10">
+      <section className="pt-6 space-y-6 md:pb-12 md:pt-10 lg:py-32 grainy">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center relative isolate">
           <div
             aria-hidden="true"
@@ -140,17 +53,10 @@ const HomePage = () => {
       {/* Categories Section */}
       <section
         id="categories"
-        className="container py-8 space-y-6 md:py-12 lg:py-10"
+        className="container space-y-6"
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           <SectionTitle>Categories</SectionTitle>
-
-          <Link
-            href={""}
-            className="flex items-center gap-1 text-sm font-medium hover:opacity-80"
-          >
-            Browse All <ArrowRightIcon className="w-4 h-4" />
-          </Link>
         </div>
         <div className="grid justify-center grid-cols-2 gap-4 mx-auto md:grid-cols-3 2xl:grid-cols-4">
           {categories?.map((category) => {
@@ -162,7 +68,7 @@ const HomePage = () => {
       </section>
 
       {/* Courses */}
-      <section id="courses" className="container space-y-6 md:py-12 lg:py-10">
+      <section id="courses" className="container space-y-6">
         <div className="flex items-center justify-between">
           <SectionTitle>Courses</SectionTitle>
           <Link
@@ -184,7 +90,7 @@ const HomePage = () => {
       <InstructorList/>
 
       <TestimonialSlider/>
-    </>
+    </div>
   );
 };
 export default HomePage;

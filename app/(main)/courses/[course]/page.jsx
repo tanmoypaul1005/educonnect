@@ -172,7 +172,7 @@ const SingleCoursePage = () => {
               <img
                 className="w-[40px] h-[40px] rounded-full"
                 src="https://avatars.githubusercontent.com/u/3633137?v=4"
-                alt="sumit saha"
+                alt="saha"
               />
               <p className="font-bold">Tapas Adhikary</p>
             </div>
