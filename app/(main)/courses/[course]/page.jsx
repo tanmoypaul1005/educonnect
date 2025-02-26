@@ -1,5 +1,4 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SectionTitle } from "@/components/section-title";
 import { cn } from "@/lib/utils";
 import { CheckCheck } from "lucide-react";
 import { Presentation } from "lucide-react";
@@ -9,13 +8,6 @@ import { MessageSquare } from "lucide-react";
 import { BookCheck } from "lucide-react";
 import { Clock10 } from "lucide-react";
 import { Radio } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import {
   Accordion,
   AccordionContent,
@@ -30,8 +22,6 @@ import { StickyNote } from "lucide-react";
 import Course from "@/app/(player)/[course_slug]/[lesson]/page";
 import { CourseSidebarMobile } from "@/app/(player)/[course_slug]/[lesson]/_components/course-sidebar-mobile";
 import { CourseSidebar } from "@/app/(player)/[course_slug]/[lesson]/_components/course-sidebar";
-import { courses } from "@/lib/data";
-import CourseCard from "../components/CourseCard";
 import Testimonials from "./components/Testimonials";
 import RelatedCourse from "./components/RelatedCourse";
 
