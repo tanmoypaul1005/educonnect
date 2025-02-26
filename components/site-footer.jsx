@@ -5,7 +5,7 @@ import Link from "next/link";
 export function SiteFooter({ classNameName }) {
   return (
     <footer className={cn(classNameName)}>
-      <footer className="w-full mt-10 border-t">
+      <footer className="container w-full mt-10 border-t">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid max-w-sm grid-cols-2 gap-3 py-10 mx-auto sm:grid-cols-4 lg:grid-cols-6 gap-y-8 md:gap-8 sm:max-w-3xl lg:max-w-full">
             <div className="mb-10 col-span-full lg:col-span-2 lg:mb-0">

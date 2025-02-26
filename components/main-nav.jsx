@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "@/components/mobile-nav";
-import lwsLogo from "@/assets/logo.png";
+import Logo from "@/assets/logo.png";
 import Image from "next/image";
 import { X } from "lucide-react";
 import { Button, buttonVariants } from "./ui/button";
@@ -25,8 +25,8 @@ export function MainNav({ items, children }) {
 	return (
 		<>
 			<div className="flex gap-6 px-5 lg:gap-4">
-				<Link href="/">
-					<Image width={40} height={40} className="max-w-[100px]" src={lwsLogo} alt="Logo" />
+				<Link className="cursor-pointer" href="/">
+					<Image width={40} height={40} className="max-w-[100px]" src={Logo} alt="Logo" />
 				</Link>
 				{items?.length ? (
 					<nav className="hidden gap-6 lg:flex">
