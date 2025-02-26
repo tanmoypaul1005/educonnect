@@ -19,9 +19,9 @@ import { NotepadText } from "lucide-react";
 import { FileQuestion } from "lucide-react";
 import { Tv } from "lucide-react";
 import { StickyNote } from "lucide-react";
-import Course from "@/app/(player)/[course_slug]/[lesson]/page";
-import { CourseSidebarMobile } from "@/app/(player)/[course_slug]/[lesson]/_components/course-sidebar-mobile";
-import { CourseSidebar } from "@/app/(player)/[course_slug]/[lesson]/_components/course-sidebar";
+import Course from "@/app/(main)/courses/[course]/components/Course";
+import { CourseSidebarMobile } from "@/app/(main)/courses/[course]/components/course-sidebar-mobile";
+import { CourseSidebar } from "@/app/(main)/courses/[course]/components/course-sidebar";
 import Testimonials from "./components/Testimonials";
 import RelatedCourse from "./components/RelatedCourse";
 
@@ -107,7 +107,6 @@ const SingleCoursePage = () => {
           <p className="mt-3 text-sm text-gray-600">
             Master React JS & Next JS
           </p>
-          {/*  */}
           <div className="flex flex-col gap-5 mt-6 sm:items-center sm:flex-row sm:gap-6 md:gap-20">
             <div className="flex items-center gap-2">
               <img

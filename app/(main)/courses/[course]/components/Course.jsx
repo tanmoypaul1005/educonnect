@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { VideoPlayer } from "./_components/video-player";
+import { VideoPlayer } from "./video-player";
 import { Separator } from "@/components/ui/separator";
-import VideoDescription from "./_components/video-description";
+import VideoDescription from "./video-description";
 
 const Course = () => {
 	return (
