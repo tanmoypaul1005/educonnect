@@ -1,14 +1,11 @@
 
 import { SectionTitle } from "@/components/section-title";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import CourseCard from "./courses/components/CourseCard";
-import CategoryCard from "./(components)/CategoryCard";
 import InstructorList from "../instructor/page";
 import TestimonialSlider from "./(components)/TestimonialSlider";
-import { categories, courses } from "@/lib/data";
+import { courses } from "@/lib/data";
 import HeroSection from "./(components)/HeroSection";
 import Category from "./(components)/Category";
 

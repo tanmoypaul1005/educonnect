@@ -1,3 +1,4 @@
+import CourseOutLineAccordion from '@/app/(main)/(components)/CourseOutLineAccordion';
 import { TabsContent } from '@/components/ui/tabs';
 import { CheckCheck } from 'lucide-react';
 import React from 'react';
@@ -62,6 +63,8 @@ const Overview = () => {
               </li>
             </ul>
           </div>
+
+          <CourseOutLineAccordion/>
         </>
       </TabsContent>
     );
