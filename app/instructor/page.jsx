@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const InstructorCard = ({ instructor }) => (
+    
     <MotionDiv
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
