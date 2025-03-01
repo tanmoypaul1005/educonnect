@@ -1,8 +1,10 @@
+"use client"
 import { SectionTitle } from '@/components/section-title';
 import { MotionDiv } from '@/lib/const';
 import { instructors } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const InstructorCard = ({ instructor }) => (
@@ -36,9 +38,11 @@ const InstructorCard = ({ instructor }) => (
   );
 
 const InstructorList = () => {
-    
+     
+    const pathName=usePathname();
+
     return (
-        <div className="container">
+        <div className={`container ${ pathName === "/instructor"? "mt-10":""}`}>
             <SectionTitle>Meet Our Instructors</SectionTitle>
             <div className="grid grid-cols-1 gap-8 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {instructors.map((instructor, index) => (

@@ -1,54 +1,57 @@
-import { cn } from "@/lib/utils";
+
 import { Logo } from "./logo";
 import Link from "next/link";
 
-export function SiteFooter({ classNameName }) {
+export function SiteFooter() {
+
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className={cn(classNameName)}>
-      <footer className="container w-full mt-10 border-t">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <footer>
+      <footer className="px-10 bg-[#161c2d] w-full mt-10 border-t">
+        <div className="">
           <div className="grid max-w-sm grid-cols-2 gap-3 py-10 mx-auto sm:grid-cols-4 lg:grid-cols-6 gap-y-8 md:gap-8 sm:max-w-3xl lg:max-w-full">
             <div className="mb-10 col-span-full lg:col-span-2 lg:mb-0">
               <Link href="/" className="flex justify-center lg:justify-start">
               <Logo />
               </Link>
-              <p className="py-8 text-sm text-center text-gray-500 lg:max-w-xs lg:text-left">Trusted in more than 100 countries & 5 million customers. Have any query ?</p>
+              <p className="py-8 text-sm text-center text-white lg:max-w-xs lg:text-left">Trusted in more than 100 countries & 5 million customers. Have any query ?</p>
             </div>
 
             <div className="text-left lg:mx-auto ">
-              <h4 className="text-lg font-medium text-gray-900 mb-7">Edu Connect</h4>
+              <h4 className="text-lg font-medium text-gray-200 mb-7">Edu Connect</h4>
               <ul className="text-sm transition-all duration-500">
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Home</a></li>
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">About</a></li>
-                <li><Link href="" className="text-gray-600 hover:text-gray-900">Pricing</Link></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">Home</a></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">About</a></li>
+                <li><Link href="" className="text-white hover:text-gray-200">Pricing</Link></li>
               </ul>
             </div>
 
             <div className="text-left lg:mx-auto ">
-              <h4 className="text-lg font-medium text-gray-900 mb-7">Products</h4>
+              <h4 className="text-lg font-medium text-gray-200 mb-7">Products</h4>
               <ul className="text-sm transition-all duration-500">
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Figma UI System</a></li>
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Icons Assets</a></li>
-                <li><Link href="/" className="text-gray-600 hover:text-gray-900">Responsive Blocks</Link></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">Figma UI System</a></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">Icons Assets</a></li>
+                <li><Link href="/" className="text-white hover:text-gray-200">Responsive Blocks</Link></li>
               </ul>
             </div>
 
             <div className="text-left lg:mx-auto ">
-              <h4 className="text-lg font-medium text-gray-900 mb-7">Support</h4>
+              <h4 className="text-lg font-medium text-gray-200 mb-7">Support</h4>
               <ul className="text-sm transition-all duration-500">
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Customer Support</a></li>
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Terms & Conditions</a></li>
-                <li ><Link href="/" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">Customer Support</a></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">Terms & Conditions</a></li>
+                <li ><Link href="/" className="text-white hover:text-gray-200">Privacy Policy</Link></li>
               </ul>
             </div>
 
 
             <div className="text-left lg:mx-auto ">
-              <h4 className="text-lg font-medium text-gray-900 mb-7">Support</h4>
+              <h4 className="text-lg font-medium text-gray-200 mb-7">Support</h4>
               <ul className="text-sm transition-all duration-500">
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Customer Support</a></li>
-                <li className="mb-6"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Terms & Conditions</a></li>
-                <li ><Link href="/" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">Customer Support</a></li>
+                <li className="mb-6"><a href="javascript:;" className="text-white hover:text-gray-200">Terms & Conditions</a></li>
+                <li ><Link href="/" className="text-white hover:text-gray-200">Privacy Policy</Link></li>
               </ul>
             </div>
      
@@ -56,7 +59,7 @@ export function SiteFooter({ classNameName }) {
 
           <div className="border-t border-gray-200 py-7">
             <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row">
-              <span className="text-sm text-gray-500 ">©<a href="https://pagedone.io/">educonnect</a> 2024, All rights reserved.</span>
+              <span className="text-sm text-white">©<a href="https://pagedone.io/">educonnect</a> {currentYear}, All rights reserved.</span>
               <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
                 <Link href="/" className="w-8 h-8 rounded-full transition-all duration-500 flex justify-center items-center bg-[#33CCFF] hover:bg-gray-900">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -87,7 +90,6 @@ export function SiteFooter({ classNameName }) {
           </div>
         </div>
       </footer>
-
     </footer>
   );
 }

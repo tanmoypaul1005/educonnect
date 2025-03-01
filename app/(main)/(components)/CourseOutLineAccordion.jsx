@@ -88,7 +88,7 @@ export default function CourseOutLineAccordion() {
   ];
 
   return (
-    <div className="mx-auto space-y-8 y-6 ">
+    <div className="mx-auto mt-4 space-y-8 y-6">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {courses.map((course, index) => (
           <CourseAccordion key={index} course={course} />
