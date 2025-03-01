@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,7 +12,7 @@ import { Label } from "@/components/ui/label";
 
 export function LoginForm() {
   return (
-    <Card className="mx-auto max-w-sm w-full">
+    <Card className="w-full max-w-sm mx-auto">
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>
         <CardDescription>
@@ -34,7 +33,7 @@ export function LoginForm() {
           <div className="grid gap-2">
             <div className="flex items-center">
               <Label htmlFor="password">Password</Label>
-              {/* <Link href="#" className="ml-auto inline-block text-sm underline">
+              {/* <Link href="#" className="inline-block ml-auto text-sm underline">
                 Forgot your password?
               </Link> */}
             </div>
@@ -44,12 +43,13 @@ export function LoginForm() {
             Login
           </Button>
         </div>
-        <div className="mt-4 text-center text-sm">
+        <div className="mt-4 text-sm text-center">
           Don&apos;t have an account?{" "}
           <Link href="register" className="underline">
             Register
           </Link>
         </div>
+
       </CardContent>
     </Card>
   );

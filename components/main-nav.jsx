@@ -19,7 +19,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 
 export function MainNav({ items, children }) {
-	
+
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 
 	return (
@@ -54,21 +54,12 @@ export function MainNav({ items, children }) {
 						className={cn(buttonVariants({ size: "sm" }), "px-4")}>
 						Login
 					</Link>
-					<DropdownMenu>
-						<DropdownMenuTrigger asChild>
-							<Button variant="outline" size="sm">
-								Register
-							</Button>
-						</DropdownMenuTrigger>
-						<DropdownMenuContent align="end" className="w-56 mt-4">
-							<DropdownMenuItem className="cursor-pointer">
-								<Link href="/register">Student</Link>
-							</DropdownMenuItem>
-							<DropdownMenuItem className="cursor-pointer">
-								<Link href="/register">Instructor</Link>
-							</DropdownMenuItem>
-						</DropdownMenuContent>
-					</DropdownMenu>
+
+					<Button variant="outline" size="sm">
+						<Link href="/register">
+							Register
+						</Link>
+					</Button>
 				</div>
 				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
