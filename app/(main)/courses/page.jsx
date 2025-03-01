@@ -1,6 +1,4 @@
 "use client";
-
-import { CourseProgress } from "@/components/course-progress";
 import {
   Accordion,
   AccordionContent,
@@ -8,31 +6,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
-import { formatPrice } from "@/lib/formatPrice";
-import { cn } from "@/lib/utils";
 import { Search } from "lucide-react";
-import { ArrowRight } from "lucide-react";
-import { BookOpen } from "lucide-react";
-import { ChevronDown } from "lucide-react";
-import { MessageSquareText } from "lucide-react";
 import { Filter } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 // for mobile sidebar
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -49,6 +31,7 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import CourseCard from "./components/CourseCard";
+import { CATEGORY_OPTIONS, courses } from "@/lib/data";
 const SORT_OPTIONS = [
   { label: "Price: Low to High", value: "price-asc" },
   { label: "Price: High to Low", value: "price-desc" },
@@ -59,102 +42,6 @@ const PRICE_OPTIONS = [
   { label: "Paid", value: "paid" },
 ];
 
-const SIZE_FILTERS = {
-  id: "size",
-  name: "Size",
-  options: [
-    { value: "S", label: "S" },
-    { value: "M", label: "M" },
-    { value: "L", label: "L" },
-  ],
-};
-
-const CATEGORY_OPTIONS = [
-  {
-    id: 1,
-    label: "Design",
-    value: "design",
-  },
-
-  {
-    id: 3,
-    label: "Development",
-    value: "development",
-  },
-  {
-    id: 4,
-    label: "Marketing",
-    value: "marketing",
-  },
-  {
-    id: 5,
-    label: "IT & Software",
-    value: "it-software",
-  },
-  {
-    id: 6,
-    label: "Personal Development",
-    value: "personal-development",
-  },
-  {
-    id: 7,
-    label: "Business",
-    value: "business",
-  },
-  {
-    id: 8,
-    label: "Photography",
-    value: "photography",
-  },
-  {
-    id: 9,
-    label: "Music",
-    value: "music",
-  },
-];
-const courses = [
-  {
-    id: 1,
-    title: "Design",
-    thumbnail: "/assets/images/categories/design.jpg",
-  },
-
-  {
-    id: 3,
-    title: "Development",
-    thumbnail: "/assets/images/categories/development.jpg",
-  },
-  {
-    id: 4,
-    title: "Marketing",
-    thumbnail: "/assets/images/categories/marketing.jpg",
-  },
-  {
-    id: 5,
-    title: "IT & Software",
-    thumbnail: "/assets/images//it_software.jpg",
-  },
-  {
-    id: 6,
-    title: "Personal Development",
-    thumbnail: "/assets/images/categories/personal_development.jpg",
-  },
-  {
-    id: 7,
-    title: "Business",
-    thumbnail: "/assets/images/categories/business.jpg",
-  },
-  {
-    id: 8,
-    title: "Photography",
-    thumbnail: "/assets/images/categories/photography.jpg",
-  },
-  {
-    id: 9,
-    title: "Music",
-    thumbnail: "/assets/images/categories/music.jpg",
-  },
-];
 const CoursesPage = () => {
   const [filter, setFilter] = useState({
     categories: ["development"],

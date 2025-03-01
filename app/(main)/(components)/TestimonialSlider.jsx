@@ -2,8 +2,7 @@ import React from "react";
 
 const TestimonialSlider = () => {
     return (
-        <div className="container px-4 mx-auto">
-            {/* bg-slate-900 */}
+        <div className="container">
             <div className="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100">
                 <div className="mb-10 space-y-5 md:mb-10 md:text-center">
                     <div className="inline-block px-3 py-1 text-sm font-semibold text-white rounded-lg md:text-center text-cn bg-[#202c47] bg-opacity-60 hover:cursor-pointer hover:bg-opacity-40">
